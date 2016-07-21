@@ -12,7 +12,7 @@
 
 
 // Return the dictionary-type data
-+ (void)PerformRequestHandler: (NSURLRequest *)request
++ (void)PerformRequestHandler:(NSURLRequest *)request
         withCompletionHandler:(void (^)(NSDictionary *data, NSError *error)) completionHandler;
 
 @end

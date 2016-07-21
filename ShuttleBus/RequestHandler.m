@@ -7,6 +7,7 @@
 //
 
 #import "RequestHandler.h"
+#import "JSONParser.h"
 
 @implementation RequestHandler
 
@@ -17,11 +18,8 @@
     NSURLSessionDataTask *dataTask = [session dataTaskWithRequest:request
                                             completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
         if (!error) {
-            
             // Convert NSData to NSDictionary
-            NSDictionary *responseData = [NSJSONSerialization JSONObjectWithData:data
-                                                            options:NSJSONReadingMutableContainers error:&error];
-            
+            NSDictionary *responseData = [JSONParser Data2JSON:data];
             completionHandler(responseData, error);
         } else {
             completionHandler(nil, error);
