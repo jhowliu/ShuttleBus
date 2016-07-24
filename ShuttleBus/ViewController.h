@@ -17,5 +17,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *busTime;
 @property (weak, nonatomic) IBOutlet UILabel *busType;
 
+//@property (strong, nonatomic)NSMutableArray *busArray;
+
 @end
 
