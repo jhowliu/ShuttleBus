@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7F0A9CFB1D3F4703004A8192 /* JSONParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F0A9CFA1D3F4703004A8192 /* JSONParser.m */; };
 		7F0A9CFE1D3F4742004A8192 /* Bus.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F0A9CFD1D3F4742004A8192 /* Bus.m */; };
+		7F70C8E11D46320300AFEA74 /* ContentPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F70C8DE1D46320300AFEA74 /* ContentPageViewController.m */; };
 		7FD766D41D3DD20100D1E4F8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FD766D31D3DD20100D1E4F8 /* main.m */; };
 		7FD766D71D3DD20100D1E4F8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FD766D61D3DD20100D1E4F8 /* AppDelegate.m */; };
 		7FD766DA1D3DD20100D1E4F8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FD766D91D3DD20100D1E4F8 /* ViewController.m */; };
@@ -23,6 +24,8 @@
 		7F0A9CFA1D3F4703004A8192 /* JSONParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONParser.m; sourceTree = "<group>"; };
 		7F0A9CFC1D3F4742004A8192 /* Bus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bus.h; sourceTree = "<group>"; };
 		7F0A9CFD1D3F4742004A8192 /* Bus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bus.m; sourceTree = "<group>"; };
+		7F70C8DD1D46320300AFEA74 /* ContentPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentPageViewController.h; sourceTree = "<group>"; };
+		7F70C8DE1D46320300AFEA74 /* ContentPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentPageViewController.m; sourceTree = "<group>"; };
 		7FD766CF1D3DD20100D1E4F8 /* ShuttleBus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShuttleBus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FD766D31D3DD20100D1E4F8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7FD766D51D3DD20100D1E4F8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -78,6 +81,8 @@
 		7FD766D11D3DD20100D1E4F8 /* ShuttleBus */ = {
 			isa = PBXGroup;
 			children = (
+				7F70C8DD1D46320300AFEA74 /* ContentPageViewController.h */,
+				7F70C8DE1D46320300AFEA74 /* ContentPageViewController.m */,
 				7FD766D81D3DD20100D1E4F8 /* ViewController.h */,
 				7FD766D91D3DD20100D1E4F8 /* ViewController.m */,
 				7FD766DB1D3DD20100D1E4F8 /* Main.storyboard */,
@@ -186,6 +191,7 @@
 				7FD766D71D3DD20100D1E4F8 /* AppDelegate.m in Sources */,
 				7FD766EB1D3DD29900D1E4F8 /* RequestHandler.m in Sources */,
 				7F0A9CFB1D3F4703004A8192 /* JSONParser.m in Sources */,
+				7F70C8E11D46320300AFEA74 /* ContentPageViewController.m in Sources */,
 				7FD766D41D3DD20100D1E4F8 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

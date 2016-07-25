@@ -6,6 +6,7 @@
 //  Copyright © 2016 Jhow. All rights reserved.
 //
 
+#import "ContentPageViewController.h"
 #import "ViewController.h"
 #import "RequestHandler.h"
 #import "JSONParser.h"
@@ -16,10 +17,16 @@
 @interface ViewController ()
 
 @property (strong, nonatomic) NSMutableArray *busArray;
+@property (strong, nonatomic) NSMutableArray *pages;
+@property (strong, nonatomic) UIPageViewController *pageViewVC;
+
 
 @end
 
 @implementation ViewController
+
+static int count = 1;
+static int pageIndex = 0;
 
 - (void)viewDidLoad
 {
@@ -27,19 +34,27 @@
     
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"https://api.apb-shuttle.info/now" ]];
     
-    UISwipeGestureRecognizer *leftSwipe = [[UISwipeGestureRecognizer alloc]
-                                            initWithTarget:self action:@selector(leftSwiping)];
-    
-    UISwipeGestureRecognizer *rightSwipe = [[UISwipeGestureRecognizer alloc]
-                                            initWithTarget:self action:@selector(rightSwiping)];
-    
-    leftSwipe.direction = UISwipeGestureRecognizerDirectionLeft;
-    rightSwipe.direction = UISwipeGestureRecognizerDirectionRight;
-    
-    [self.view addGestureRecognizer:leftSwipe];
-    [self.view addGestureRecognizer:rightSwipe];
-    
     [self sendURLRequest:request];
+
+    self.pageViewVC.dataSource = self;
+    self.pageViewVC.delegate = self;
+    
+    ContentPageViewController *page = [self.storyboard instantiateViewControllerWithIdentifier:@"ContentPageViewController"];
+    
+    [self.pageViewVC setViewControllers:@[page] direction:UIPageViewControllerNavigationDirectionForward
+                               animated:NO completion:nil];
+    
+    [self.pages addObject:page];
+   
+    [self addChildViewController:self.pageViewVC];
+    [self.view addSubview:self.pageViewVC.view];
+}
+
+- (UIPageViewController *)pageViewVC
+{
+    if (!_pageViewVC) _pageViewVC = [self.storyboard instantiateViewControllerWithIdentifier:@"PageViewController"];
+    
+    return _pageViewVC;
 }
 
 - (NSMutableArray *)busArray
@@ -49,21 +64,25 @@
     return _busArray;
 }
 
-static int count = 0;
+- (NSMutableArray *)pages
+{
+    if (!_pages) _pages = [[NSMutableArray alloc] init];
+    
+    return _pages;
+}
 
 - (void)sendURLRequest:(NSURLRequest *)requestObj
 {
+    isLoading = YES;
     [RequestHandler PerformRequestHandler:requestObj withCompletionHandler:^(NSDictionary *data, NSError *error) {
         
         if (!error) {
-            count++;
-            
             bus = [JSONParser JSON2Bus:data];
             // Add the bus object into the array.
             [self.busArray addObject: bus];
-            
             [[NSOperationQueue mainQueue] addOperationWithBlock: ^{
-                [self updateUI];
+                [self updatePageUI];
+                isLoading = NO;
             }];
         } else {
             NSLog(@"%@", [error localizedDescription]);
@@ -71,28 +90,9 @@ static int count = 0;
     }];
 }
 
-- (void)leftSwiping
+- (void)updatePageUI
 {
-    NSLog(@"Swipe left !");
-    NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://api.apb-shuttle.info/next/%d", count]]];
-    
-    [self sendURLRequest:request];
-}
-
-// Send the request for the next bus
-- (void)rightSwiping
-{
-    if (count > 1) {
-        NSLog(@"Swipe right !");
-        count--;
-        [self.busArray removeLastObject];
-        bus = [self.busArray lastObject];
-        [self updateUI];
-    }
-}
-
-- (void)updateUI
-{
+    NSLog(@"updateuI %d", pageIndex);
     // The spacing style font
     NSDictionary *titleAttributes = @{
                                       NSKernAttributeName: @10.0f
@@ -101,20 +101,70 @@ static int count = 0;
                                  NSKernAttributeName: @5.0f
                                 };
     
-    //self.busName.text = bus.name;
-    //self.busTime.text = bus.depart;
-    //self.busType.text = bus.note;
     
+    ContentPageViewController *page = [self.pages objectAtIndex:pageIndex];
     
-    self.busName.attributedText = [[NSMutableAttributedString alloc] initWithString:bus.name attributes:titleAttributes];
-    self.busTime.attributedText = [[NSMutableAttributedString alloc] initWithString:bus.depart attributes:titleAttributes];
-    self.busType.attributedText = [[NSMutableAttributedString alloc] initWithString:bus.note attributes:attributes];
+    page.busName.attributedText = [[NSMutableAttributedString alloc] initWithString:bus.name
+                                                                 attributes:titleAttributes];
+    page.busTime.attributedText = [[NSMutableAttributedString alloc] initWithString:bus.depart
+                                                                 attributes:titleAttributes];
+    page.busType.attributedText = [[NSMutableAttributedString alloc] initWithString:bus.note
+                                                                 attributes:attributes];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - UIPageViewController datasource 
+
+- (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController
+{
+    // Check the if the download task is done
+    if (isLoading) return nil;
+    
+    pageIndex++;
+    NSLog(@"%d, %d", pageIndex, count);
+    
+    if (pageIndex == count) {
+        NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL
+                                       URLWithString:[NSString stringWithFormat:@"https://api.apb-shuttle.info/next/%d", count]]];
+        ContentPageViewController *page = [self.storyboard
+                               instantiateViewControllerWithIdentifier:@"ContentPageViewController"];
+        [self sendURLRequest:request];
+        [self.pages addObject:page];
+        count++;
+    }
+    
+    
+    return [self.pages objectAtIndex:pageIndex];
+}
+
+- (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(UIViewController *)viewController
+{
+    if (pageIndex == 0) return nil;
+    
+    pageIndex--;
+    NSLog(@"%d", pageIndex);
+   
+    return [self.pages objectAtIndex:pageIndex];
+}
+
+# pragma mark - UIPageViewController delegate
+
+- (void)pageViewController:(UIPageViewController *)pageViewController
+    willTransitionToViewControllers:(NSArray<UIViewController *> *)pendingViewControllers
+{
+    NSLog(@"Animation Start");
+    self.view.userInteractionEnabled = NO;
+}
+
+- (void)pageViewController:(UIPageViewController *)pageViewController didFinishAnimating:(BOOL)finished
+   previousViewControllers:(NSArray<UIViewController *> *)previousViewControllers transitionCompleted:(BOOL)completed
+{
+    if (completed && finished) self.view.userInteractionEnabled = YES;
 }
 
 @end

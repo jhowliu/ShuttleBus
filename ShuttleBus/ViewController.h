@@ -9,15 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "Bus.h"
 
-@interface ViewController : UIViewController {
+@interface ViewController : UIViewController <UIPageViewControllerDelegate, UIPageViewControllerDataSource> {
     Bus *bus;
+    BOOL isLoading;
 }
-
-@property (weak, nonatomic) IBOutlet UILabel *busName;
-@property (weak, nonatomic) IBOutlet UILabel *busTime;
-@property (weak, nonatomic) IBOutlet UILabel *busType;
-
-//@property (strong, nonatomic)NSMutableArray *busArray;
 
 @end
 
