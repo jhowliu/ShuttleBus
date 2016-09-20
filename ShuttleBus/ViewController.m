@@ -16,38 +16,49 @@
 
 @interface ViewController ()
 
-@property (strong, nonatomic) NSMutableArray *busArray;
+@property (strong, nonatomic) NSArray *busArray;
 @property (strong, nonatomic) NSMutableArray *pages;
+@property (strong, nonatomic) ContentPageViewController *page;
 @property (strong, nonatomic) UIPageViewController *pageViewVC;
-
 
 @end
 
 @implementation ViewController
 
+PageCurrentState pageState;
+
 static int count = 1;
 static int pageIndex = 0;
+static int closestBusIndex = -1;
+
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+   
+    formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"HH:mm"];
+    //NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"https://api.apb-shuttle.info/now" ]];
     
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"https://api.apb-shuttle.info/now" ]];
-    
-    [self sendURLRequest:request];
+    //[self sendURLRequest:request];
 
     self.pageViewVC.dataSource = self;
     self.pageViewVC.delegate = self;
     
     ContentPageViewController *page = [self.storyboard instantiateViewControllerWithIdentifier:@"ContentPageViewController"];
+   
+    // Set first content page
+    self.page = page;
     
     [self.pageViewVC setViewControllers:@[page] direction:UIPageViewControllerNavigationDirectionForward
                                animated:NO completion:nil];
     
     [self.pages addObject:page];
-   
     [self addChildViewController:self.pageViewVC];
     [self.view addSubview:self.pageViewVC.view];
+    
+    [self loadLocalization];
+    [self updatePageUI];
 }
 
 - (UIPageViewController *)pageViewVC
@@ -57,9 +68,9 @@ static int pageIndex = 0;
     return _pageViewVC;
 }
 
-- (NSMutableArray *)busArray
+- (NSArray *)busArray
 {
-    if (!_busArray) _busArray = [[NSMutableArray alloc] init];
+    if (!_busArray) _busArray = [[NSArray alloc] init];
     
     return _busArray;
 }
@@ -71,6 +82,15 @@ static int pageIndex = 0;
     return _pages;
 }
 
+// You cannot initalize it because you will get nothing when you call it. (I'm not sure why it happened, because i forgot the ! mark)
+- (ContentPageViewController *)page
+{
+    if (!_page) _page = [self.storyboard instantiateViewControllerWithIdentifier:@"ContentPageViewController"];
+    
+    return _page;
+}
+
+/*
 - (void)sendURLRequest:(NSURLRequest *)requestObj
 {
     isLoading = YES;
@@ -89,27 +109,28 @@ static int pageIndex = 0;
         }
     }];
 }
+ */
 
 - (void)updatePageUI
 {
-    NSLog(@"updateuI %d", pageIndex);
+    NSString *body = [NSString stringWithFormat:@"%@ To %@", bus.start, bus.arrival];
+    
     // The spacing style font
-    NSDictionary *titleAttributes = @{
-                                      NSKernAttributeName: @10.0f
-                                     };
     NSDictionary *attributes = @{
                                  NSKernAttributeName: @5.0f
                                 };
     
     
-    ContentPageViewController *page = [self.pages objectAtIndex:pageIndex];
+    self.page = [self.pages objectAtIndex:pageIndex];
+    //NSLog(@"Updated %@", self.page);
     
-    page.busName.attributedText = [[NSMutableAttributedString alloc] initWithString:bus.name
-                                                                 attributes:titleAttributes];
-    page.busTime.attributedText = [[NSMutableAttributedString alloc] initWithString:bus.depart
-                                                                 attributes:titleAttributes];
-    page.busType.attributedText = [[NSMutableAttributedString alloc] initWithString:bus.note
-                                                                 attributes:attributes];
+    self.page.busName.attributedText = [[NSMutableAttributedString alloc] initWithString:bus.name
+                                                                              attributes:attributes];
+    self.page.busTime.attributedText = [[NSMutableAttributedString alloc] initWithString:bus.depart
+                                                                              attributes:attributes];
+    self.page.busBody.attributedText = [[NSMutableAttributedString alloc] initWithString:body
+                                                                              attributes: attributes];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -122,22 +143,23 @@ static int pageIndex = 0;
 
 - (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(UIViewController *)viewController
 {
-    // Check the if the download task is done
-    if (isLoading) return nil;
+    pageState = NEXT_PAGE_STATE;
     
     pageIndex++;
-    NSLog(@"%d, %d", pageIndex, count);
+    closestBusIndex = (closestBusIndex+1) == [self.busArray count] ? 0 : closestBusIndex+1;
+    //NSLog(@"%d, %d", pageIndex, count);
     
     if (pageIndex == count) {
-        NSURLRequest *request = [[NSURLRequest alloc] initWithURL:[NSURL
-                                       URLWithString:[NSString stringWithFormat:@"https://api.apb-shuttle.info/next/%d", count]]];
         ContentPageViewController *page = [self.storyboard
                                instantiateViewControllerWithIdentifier:@"ContentPageViewController"];
-        [self sendURLRequest:request];
         [self.pages addObject:page];
+        
+        bus = [self.busArray objectAtIndex:closestBusIndex];
+        
+        // the page IBOutlet will be null, because they've not be presented yet.
+        //[self updatePageUI];
         count++;
     }
-    
     
     return [self.pages objectAtIndex:pageIndex];
 }
@@ -146,8 +168,10 @@ static int pageIndex = 0;
 {
     if (pageIndex == 0) return nil;
     
+    pageState = PREVIOUS_PAGE_STATE;
+    
     pageIndex--;
-    NSLog(@"%d", pageIndex);
+    closestBusIndex = (closestBusIndex-1 < 0) ? (int)[self.busArray count]-1 : closestBusIndex-1;
    
     return [self.pages objectAtIndex:pageIndex];
 }
@@ -164,7 +188,65 @@ static int pageIndex = 0;
 - (void)pageViewController:(UIPageViewController *)pageViewController didFinishAnimating:(BOOL)finished
    previousViewControllers:(NSArray<UIViewController *> *)previousViewControllers transitionCompleted:(BOOL)completed
 {
-    if (completed && finished) self.view.userInteractionEnabled = YES;
+    //NSLog(@"Animation finished :%d, completed :%d", finished, completed);
+    if (finished) self.view.userInteractionEnabled = YES;
+    
+    if (!completed) {
+        // Stay the current page if the user don't turn the page.
+        // 0 = PREVIOUS, 1 = NEXT
+        pageIndex = pageState ? pageIndex - 1 : pageIndex + 1;
+    } else {
+        return (count == pageIndex+1) ? [self updatePageUI] : nil;
+    }
+}
+
+# pragma mark - Load localization
+
+- (void)loadLocalization {
+    NSError *error;
+    
+    NSURL *filePath = [[NSBundle mainBundle] URLForResource:@"bus" withExtension:@"json"];
+   
+    NSData *jsonData = [NSData dataWithContentsOfURL:filePath];
+    
+    NSArray *jsonArray = [NSJSONSerialization JSONObjectWithData:jsonData
+                                                         options:NSJSONReadingMutableContainers
+                                                           error:&error];
+    
+    self.busArray = [JSONParser JsonArray2BusArray:jsonArray];
+    
+    closestBusIndex = [self findClosestTime];
+    
+    bus = [self.busArray objectAtIndex:closestBusIndex];
+}
+
+- (int)findClosestTime {
+    NSDate *now = [NSDate date];
+    
+    int indexOfClosestTime = -1;
+    int currentTimeToSeconds = [self timeToSeconds:[formatter stringFromDate:now]];
+    
+    [self timeToSeconds:bus.depart];
+    for (Bus *bus in self.busArray) {
+        int tmp = [self timeToSeconds:bus.depart];
+        int diff = currentTimeToSeconds - tmp;
+        indexOfClosestTime +=1;
+        
+        if (diff < 0) break;
+    }
+    
+    return indexOfClosestTime == -1 ? 0 : indexOfClosestTime;
+}
+
+- (int)timeToSeconds: (NSString *)time {
+    int seconds = 0;
+    
+    NSArray *splitedStrings = [time componentsSeparatedByString:@":"];
+    
+    seconds += [[splitedStrings objectAtIndex:0] intValue] * 60 * 60;
+    seconds += [[splitedStrings objectAtIndex:1] intValue] * 60;
+    
+    return seconds;
 }
 
 @end

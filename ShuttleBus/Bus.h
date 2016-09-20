@@ -11,9 +11,10 @@
 @interface Bus : NSObject
 
 @property (strong, nonatomic) NSString *name;
-@property (strong, nonatomic) NSString *note;
 @property (strong, nonatomic) NSString *depart;
-@property (nonatomic) BOOL isSpecial;
+@property (strong, nonatomic) NSString *start;
+@property (strong, nonatomic) NSString *arrival;
+@property (nonatomic) BOOL isAdditional;
 
 // Initializing with a json file. 
 - (Bus *)initWithDict:(NSDictionary *)busDict;

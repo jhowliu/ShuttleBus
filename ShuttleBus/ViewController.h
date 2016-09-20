@@ -9,10 +9,17 @@
 #import <UIKit/UIKit.h>
 #import "Bus.h"
 
-@interface ViewController : UIViewController <UIPageViewControllerDelegate, UIPageViewControllerDataSource> {
+@interface ViewController : UIViewController <UIPageViewControllerDelegate, UIPageViewControllerDataSource>
+{
+    NSDateFormatter *formatter;
     Bus *bus;
-    BOOL isLoading;
 }
+
+typedef NS_ENUM(NSInteger, PageCurrentState)
+{
+    PREVIOUS_PAGE_STATE = 0,
+    NEXT_PAGE_STATE
+};
 
 @end
 

@@ -14,6 +14,6 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *busName;
 @property (weak, nonatomic) IBOutlet UILabel *busTime;
-@property (weak, nonatomic) IBOutlet UILabel *busType;
+@property (weak, nonatomic) IBOutlet UILabel *busBody;
 
 @end

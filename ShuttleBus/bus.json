@@ -1,0 +1,919 @@
+[
+    {
+        "additional": "false", 
+        "arrival": "T1/T2", 
+        "bus": "保安隊", 
+        "start": "航警局", 
+        "time": "00:10"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "T2", 
+        "bus": "亞通巴士", 
+        "start": "T1", 
+        "time": "00:15"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "航警局", 
+        "bus": "亞通巴士", 
+        "start": "T1", 
+        "time": "00:20"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "T2", 
+        "bus": "亞通巴士", 
+        "start": "T1", 
+        "time": "00:55"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "航警局", 
+        "bus": "亞通巴士", 
+        "start": "T1", 
+        "time": "01:00"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "T2", 
+        "bus": "亞通巴士", 
+        "start": "T1", 
+        "time": "01:20"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "航警局", 
+        "bus": "亞通巴士", 
+        "start": "T1", 
+        "time": "01:25"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "T1/T2", 
+        "bus": "保安隊", 
+        "start": "航警局", 
+        "time": "01:40"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "T2", 
+        "bus": "亞通巴士", 
+        "start": "T1", 
+        "time": "01:45"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "航警局", 
+        "bus": "亞通巴士", 
+        "start": "T1", 
+        "time": "01:50"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "T2", 
+        "bus": "亞通巴士", 
+        "start": "T1", 
+        "time": "02:10"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "T1/T2", 
+        "bus": "保安隊", 
+        "start": "航警局", 
+        "time": "02:10"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "航警局", 
+        "bus": "亞通巴士", 
+        "start": "T1", 
+        "time": "02:15"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "T2", 
+        "bus": "亞通巴士", 
+        "start": "T1", 
+        "time": "03:05"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "T2", 
+        "bus": "亞通巴士", 
+        "start": "T1", 
+        "time": "03:20"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "航警局", 
+        "bus": "亞通巴士", 
+        "start": "T1", 
+        "time": "03:25"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "T1/T2", 
+        "bus": "保安隊", 
+        "start": "航警局", 
+        "time": "03:40"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "T2", 
+        "bus": "亞通巴士", 
+        "start": "T1", 
+        "time": "03:45"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "航警局", 
+        "bus": "亞通巴士", 
+        "start": "T1", 
+        "time": "03:50"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "T2", 
+        "bus": "亞通巴士", 
+        "start": "T1", 
+        "time": "04:10"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "T1/T2", 
+        "bus": "保安隊", 
+        "start": "航警局", 
+        "time": "04:10"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "航警局", 
+        "bus": "亞通巴士", 
+        "start": "T1", 
+        "time": "04:15"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "T2", 
+        "bus": "亞通巴士", 
+        "start": "T1", 
+        "time": "04:35"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "航警局", 
+        "bus": "亞通巴士", 
+        "start": "T1", 
+        "time": "04:40"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "T1/T2", 
+        "bus": "安檢隊", 
+        "start": "航警局", 
+        "time": "04:45"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "T2", 
+        "bus": "亞通巴士", 
+        "start": "T1", 
+        "time": "05:00"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "航警局", 
+        "bus": "亞通巴士", 
+        "start": "T1", 
+        "time": "05:05"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "T2", 
+        "bus": "亞通巴士", 
+        "start": "T1", 
+        "time": "05:25"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "航警局", 
+        "bus": "亞通巴士", 
+        "start": "T1", 
+        "time": "05:30"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "T1/T2", 
+        "bus": "保安隊", 
+        "start": "航警局", 
+        "time": "05:40"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "T2", 
+        "bus": "亞通巴士", 
+        "start": "T1", 
+        "time": "05:50"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "航警局", 
+        "bus": "亞通巴士", 
+        "start": "T1", 
+        "time": "05:55"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "T1/T2", 
+        "bus": "保安隊", 
+        "start": "航警局", 
+        "time": "06:10"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "T2", 
+        "bus": "亞通巴士", 
+        "start": "T1", 
+        "time": "06:15"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "航警局", 
+        "bus": "亞通巴士", 
+        "start": "T1", 
+        "time": "06:20"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "T2", 
+        "bus": "亞通巴士", 
+        "start": "T1", 
+        "time": "06:40"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "T2", 
+        "bus": "亞通巴士", 
+        "start": "T1", 
+        "time": "07:00"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "航警局", 
+        "bus": "亞通巴士", 
+        "start": "T1", 
+        "time": "07:05"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "T2", 
+        "bus": "亞通巴士", 
+        "start": "T1", 
+        "time": "07:35"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "航警局", 
+        "bus": "亞通巴士", 
+        "start": "T1", 
+        "time": "07:40"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "T1/T2", 
+        "bus": "保安隊", 
+        "start": "航警局", 
+        "time": "07:40"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "T2", 
+        "bus": "亞通巴士", 
+        "start": "T1", 
+        "time": "08:00"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "航警局", 
+        "bus": "亞通巴士", 
+        "start": "T1", 
+        "time": "08:05"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "T1/T2", 
+        "bus": "保安隊", 
+        "start": "航警局", 
+        "time": "08:10"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "T2", 
+        "bus": "亞通巴士", 
+        "start": "T1", 
+        "time": "08:35"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "航警局", 
+        "bus": "亞通巴士", 
+        "start": "T1", 
+        "time": "08:40"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "T1/T2", 
+        "bus": "局本部", 
+        "start": "航警局", 
+        "time": "08:40"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "T2", 
+        "bus": "亞通巴士", 
+        "start": "T1", 
+        "time": "09:00"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "T1/T2", 
+        "bus": "局本部", 
+        "start": "航警局", 
+        "time": "09:10"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "T2", 
+        "bus": "亞通巴士", 
+        "start": "T1", 
+        "time": "09:35"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "航警局", 
+        "bus": "亞通巴士", 
+        "start": "T1", 
+        "time": "09:40"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "T1/T2", 
+        "bus": "保安隊", 
+        "start": "航警局", 
+        "time": "09:40"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "T2", 
+        "bus": "亞通巴士", 
+        "start": "T1", 
+        "time": "10:00"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "航警局", 
+        "bus": "亞通巴士", 
+        "start": "T1", 
+        "time": "10:05"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "T1/T2", 
+        "bus": "保安隊", 
+        "start": "航警局", 
+        "time": "10:10"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "T2", 
+        "bus": "亞通巴士", 
+        "start": "T1", 
+        "time": "10:35"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "T1/T2", 
+        "bus": "局本部", 
+        "start": "航警局", 
+        "time": "10:40"
+    }, 
+    {
+        "additional": "true", 
+        "arrival": "T1/T2", 
+        "bus": "安檢隊", 
+        "start": "航警局", 
+        "time": "11:00"
+    }, 
+    {
+        "additional": "true", 
+        "arrival": "T1/T2", 
+        "bus": "安檢隊", 
+        "start": "航警局", 
+        "time": "11:10"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "T1/T2", 
+        "bus": "局本部", 
+        "start": "航警局", 
+        "time": "11:10"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "T2", 
+        "bus": "亞通巴士", 
+        "start": "T1", 
+        "time": "11:25"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "航警局", 
+        "bus": "亞通巴士", 
+        "start": "T1", 
+        "time": "11:30"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "T1/T2", 
+        "bus": "局本部", 
+        "start": "航警局", 
+        "time": "11:40"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "T2", 
+        "bus": "亞通巴士", 
+        "start": "T1", 
+        "time": "12:00"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "航警局", 
+        "bus": "亞通巴士", 
+        "start": "T1", 
+        "time": "12:05"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "T1/T2", 
+        "bus": "保安隊", 
+        "start": "航警局", 
+        "time": "12:10"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "T2", 
+        "bus": "亞通巴士", 
+        "start": "T1", 
+        "time": "12:35"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "T1/T2", 
+        "bus": "局本部", 
+        "start": "航警局", 
+        "time": "12:40"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "T2", 
+        "bus": "亞通巴士", 
+        "start": "T1", 
+        "time": "13:00"
+    }, 
+    {
+        "additional": "true", 
+        "arrival": "T1/T2", 
+        "bus": "安檢隊", 
+        "start": "航警局", 
+        "time": "13:00"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "航警局", 
+        "bus": "亞通巴士", 
+        "start": "T1", 
+        "time": "13:05"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "T1/T2", 
+        "bus": "局本部", 
+        "start": "航警局", 
+        "time": "13:10"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "T2", 
+        "bus": "亞通巴士", 
+        "start": "T1", 
+        "time": "13:35"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "航警局", 
+        "bus": "亞通巴士", 
+        "start": "T1", 
+        "time": "13:40"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "T1/T2", 
+        "bus": "保安隊", 
+        "start": "航警局", 
+        "time": "13:40"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "T2", 
+        "bus": "亞通巴士", 
+        "start": "T1", 
+        "time": "14:00"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "航警局", 
+        "bus": "亞通巴士", 
+        "start": "T1", 
+        "time": "14:05"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "T1/T2", 
+        "bus": "保安隊", 
+        "start": "航警局", 
+        "time": "14:10"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "T2", 
+        "bus": "亞通巴士", 
+        "start": "T1", 
+        "time": "14:35"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "航警局", 
+        "bus": "亞通巴士", 
+        "start": "T1", 
+        "time": "14:40"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "T1/T2", 
+        "bus": "局本部", 
+        "start": "航警局", 
+        "time": "14:40"
+    }, 
+    {
+        "additional": "true", 
+        "arrival": "T1/T2", 
+        "bus": "安檢隊", 
+        "start": "航警局", 
+        "time": "14:50"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "T2", 
+        "bus": "亞通巴士", 
+        "start": "T1", 
+        "time": "15:00"
+    }, 
+    {
+        "additional": "true", 
+        "arrival": "T1/T2", 
+        "bus": "安檢隊", 
+        "start": "航警局", 
+        "time": "15:10"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "T1/T2", 
+        "bus": "局本部", 
+        "start": "航警局", 
+        "time": "15:10"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "T2", 
+        "bus": "亞通巴士", 
+        "start": "T1", 
+        "time": "15:35"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "航警局", 
+        "bus": "亞通巴士", 
+        "start": "T1", 
+        "time": "15:40"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "T1/T2", 
+        "bus": "局本部", 
+        "start": "航警局", 
+        "time": "15:40"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "T2", 
+        "bus": "亞通巴士", 
+        "start": "T1", 
+        "time": "16:00"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "航警局", 
+        "bus": "亞通巴士", 
+        "start": "T1", 
+        "time": "16:05"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "T1/T2", 
+        "bus": "保安隊", 
+        "start": "航警局", 
+        "time": "16:10"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "T2", 
+        "bus": "亞通巴士", 
+        "start": "T1", 
+        "time": "16:35"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "航警局", 
+        "bus": "亞通巴士", 
+        "start": "T1", 
+        "time": "16:40"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "T1/T2", 
+        "bus": "局本部", 
+        "start": "航警局", 
+        "time": "16:40"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "T1/T2", 
+        "bus": "安檢隊", 
+        "start": "航警局", 
+        "time": "17:05"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "T2", 
+        "bus": "亞通巴士", 
+        "start": "T1", 
+        "time": "17:10"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "航警局", 
+        "bus": "亞通巴士", 
+        "start": "T1", 
+        "time": "17:15"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "T2", 
+        "bus": "亞通巴士", 
+        "start": "T1", 
+        "time": "17:40"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "T1/T2", 
+        "bus": "保安隊", 
+        "start": "航警局", 
+        "time": "17:40"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "航警局", 
+        "bus": "亞通巴士", 
+        "start": "T1", 
+        "time": "17:45"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "T2", 
+        "bus": "亞通巴士", 
+        "start": "T1", 
+        "time": "18:05"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "T1/T2", 
+        "bus": "保安隊", 
+        "start": "航警局", 
+        "time": "18:10"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "T2", 
+        "bus": "亞通巴士", 
+        "start": "T1", 
+        "time": "19:00"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "航警局", 
+        "bus": "亞通巴士", 
+        "start": "T1", 
+        "time": "19:05"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "T2", 
+        "bus": "亞通巴士", 
+        "start": "T1", 
+        "time": "19:35"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "航警局", 
+        "bus": "亞通巴士", 
+        "start": "T1", 
+        "time": "19:40"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "T1/T2", 
+        "bus": "保安隊", 
+        "start": "航警局", 
+        "time": "19:40"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "T2", 
+        "bus": "亞通巴士", 
+        "start": "T1", 
+        "time": "20:00"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "航警局", 
+        "bus": "亞通巴士", 
+        "start": "T1", 
+        "time": "20:05"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "T1/T2", 
+        "bus": "保安隊", 
+        "start": "航警局", 
+        "time": "20:10"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "T2", 
+        "bus": "亞通巴士", 
+        "start": "T1", 
+        "time": "20:35"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "航警局", 
+        "bus": "亞通巴士", 
+        "start": "T1", 
+        "time": "20:40"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "T2", 
+        "bus": "亞通巴士", 
+        "start": "T1", 
+        "time": "21:00"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "T1/T2", 
+        "bus": "安檢隊", 
+        "start": "航警局", 
+        "time": "21:00"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "T2", 
+        "bus": "亞通巴士", 
+        "start": "T1", 
+        "time": "21:35"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "航警局", 
+        "bus": "亞通巴士", 
+        "start": "T1", 
+        "time": "21:40"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "T1/T2", 
+        "bus": "保安隊", 
+        "start": "航警局", 
+        "time": "21:40"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "T2", 
+        "bus": "亞通巴士", 
+        "start": "T1", 
+        "time": "22:00"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "航警局", 
+        "bus": "亞通巴士", 
+        "start": "T1", 
+        "time": "22:05"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "T1/T2", 
+        "bus": "保安隊", 
+        "start": "航警局", 
+        "time": "22:10"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "T2", 
+        "bus": "亞通巴士", 
+        "start": "T1", 
+        "time": "22:35"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "航警局", 
+        "bus": "亞通巴士", 
+        "start": "T1", 
+        "time": "22:40"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "T2", 
+        "bus": "亞通巴士", 
+        "start": "T1", 
+        "time": "23:00"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "T1/T2", 
+        "bus": "安檢隊", 
+        "start": "航警局", 
+        "time": "23:00"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "航警局", 
+        "bus": "亞通巴士", 
+        "start": "T1", 
+        "time": "23:05"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "T2", 
+        "bus": "亞通巴士", 
+        "start": "T1", 
+        "time": "23:25"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "T1/T2", 
+        "bus": "安檢隊", 
+        "start": "航警局", 
+        "time": "23:25"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "航警局", 
+        "bus": "亞通巴士", 
+        "start": "T1", 
+        "time": "23:30"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "T1/T2", 
+        "bus": "保安隊", 
+        "start": "航警局", 
+        "time": "23:40"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "T2", 
+        "bus": "亞通巴士", 
+        "start": "T1", 
+        "time": "23:50"
+    }, 
+    {
+        "additional": "false", 
+        "arrival": "航警局", 
+        "bus": "亞通巴士", 
+        "start": "T1", 
+        "time": "23:55"
+    }
+]

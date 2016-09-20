@@ -17,4 +17,6 @@
 + (Bus *)JSON2Bus:(NSDictionary *)jsonDict;
 + (NSDictionary *)Bus2JSON:(Bus *)bus;
 
++ (NSArray *)JsonArray2BusArray:(NSArray *)jsonArray;
+
 @end

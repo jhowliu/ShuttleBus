@@ -15,10 +15,12 @@
     self = [super init];
     
     if (self) {
-        self.name = [busDict objectForKey:@"name"];
-        self.note = [busDict objectForKey:@"note"];
-        self.depart = [busDict objectForKey:@"depart"];
-        self.isSpecial = [busDict objectForKey:@"special"];
+        
+        self.name = [busDict objectForKey:@"bus"];
+        self.depart = [busDict objectForKey:@"time"];
+        self.start = [busDict objectForKey:@"start"];
+        self.arrival = [busDict objectForKey:@"arrival"];
+        self.isAdditional = [[busDict objectForKey:@"additional"] boolValue];
     }
     
     return self;
