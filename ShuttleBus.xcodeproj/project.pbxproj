@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7F0A9CFB1D3F4703004A8192 /* JSONParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F0A9CFA1D3F4703004A8192 /* JSONParser.m */; };
 		7F0A9CFE1D3F4742004A8192 /* Bus.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F0A9CFD1D3F4742004A8192 /* Bus.m */; };
+		7F4DA7A71DA3DBCA00E371FB /* AlarmSettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F4DA7A61DA3DBCA00E371FB /* AlarmSettingTableViewController.m */; };
 		7F70C8E11D46320300AFEA74 /* ContentPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F70C8DE1D46320300AFEA74 /* ContentPageViewController.m */; };
 		7FD766D41D3DD20100D1E4F8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FD766D31D3DD20100D1E4F8 /* main.m */; };
 		7FD766D71D3DD20100D1E4F8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FD766D61D3DD20100D1E4F8 /* AppDelegate.m */; };
@@ -17,6 +18,7 @@
 		7FD766DF1D3DD20200D1E4F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FD766DE1D3DD20200D1E4F8 /* Assets.xcassets */; };
 		7FD766E21D3DD20200D1E4F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FD766E01D3DD20200D1E4F8 /* LaunchScreen.storyboard */; };
 		7FD766EB1D3DD29900D1E4F8 /* RequestHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FD766EA1D3DD29900D1E4F8 /* RequestHandler.m */; };
+		7FDA30FC1DA3FB9B00C793C4 /* BusTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FDA30FB1DA3FB9B00C793C4 /* BusTableViewCell.m */; };
 		7FEF80411D7F4F6E0088895F /* bus.json in Resources */ = {isa = PBXBuildFile; fileRef = 7FEF80401D7F4F6E0088895F /* bus.json */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +27,8 @@
 		7F0A9CFA1D3F4703004A8192 /* JSONParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONParser.m; sourceTree = "<group>"; };
 		7F0A9CFC1D3F4742004A8192 /* Bus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bus.h; sourceTree = "<group>"; };
 		7F0A9CFD1D3F4742004A8192 /* Bus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bus.m; sourceTree = "<group>"; };
+		7F4DA7A51DA3DBCA00E371FB /* AlarmSettingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmSettingTableViewController.h; sourceTree = "<group>"; };
+		7F4DA7A61DA3DBCA00E371FB /* AlarmSettingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmSettingTableViewController.m; sourceTree = "<group>"; };
 		7F70C8DD1D46320300AFEA74 /* ContentPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentPageViewController.h; sourceTree = "<group>"; };
 		7F70C8DE1D46320300AFEA74 /* ContentPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentPageViewController.m; sourceTree = "<group>"; };
 		7FD766CF1D3DD20100D1E4F8 /* ShuttleBus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShuttleBus.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -39,6 +43,8 @@
 		7FD766E31D3DD20200D1E4F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7FD766E91D3DD29900D1E4F8 /* RequestHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RequestHandler.h; sourceTree = "<group>"; };
 		7FD766EA1D3DD29900D1E4F8 /* RequestHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RequestHandler.m; sourceTree = "<group>"; };
+		7FDA30FA1DA3FB9B00C793C4 /* BusTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusTableViewCell.h; sourceTree = "<group>"; };
+		7FDA30FB1DA3FB9B00C793C4 /* BusTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusTableViewCell.m; sourceTree = "<group>"; };
 		7FEF80401D7F4F6E0088895F /* bus.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = bus.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -91,6 +97,7 @@
 				7FD766D21D3DD20100D1E4F8 /* Supporting Files */,
 				7FD766EC1D3DD29D00D1E4F8 /* RequestManager */,
 				7F0A9CFF1D3F608F004A8192 /* Model */,
+				7FDA30FD1DA3FBA000C793C4 /* View */,
 			);
 			path = ShuttleBus;
 			sourceTree = "<group>";
@@ -114,6 +121,15 @@
 			name = RequestManager;
 			sourceTree = "<group>";
 		};
+		7FDA30FD1DA3FBA000C793C4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7FDA30FA1DA3FB9B00C793C4 /* BusTableViewCell.h */,
+				7FDA30FB1DA3FB9B00C793C4 /* BusTableViewCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		7FEF803D1D7F4EC50088895F /* Resource */ = {
 			isa = PBXGroup;
 			children = (
@@ -130,6 +146,8 @@
 				7F70C8DE1D46320300AFEA74 /* ContentPageViewController.m */,
 				7FD766D81D3DD20100D1E4F8 /* ViewController.h */,
 				7FD766D91D3DD20100D1E4F8 /* ViewController.m */,
+				7F4DA7A51DA3DBCA00E371FB /* AlarmSettingTableViewController.h */,
+				7F4DA7A61DA3DBCA00E371FB /* AlarmSettingTableViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -208,6 +226,8 @@
 			files = (
 				7F0A9CFE1D3F4742004A8192 /* Bus.m in Sources */,
 				7FD766DA1D3DD20100D1E4F8 /* ViewController.m in Sources */,
+				7FDA30FC1DA3FB9B00C793C4 /* BusTableViewCell.m in Sources */,
+				7F4DA7A71DA3DBCA00E371FB /* AlarmSettingTableViewController.m in Sources */,
 				7FD766D71D3DD20100D1E4F8 /* AppDelegate.m in Sources */,
 				7FD766EB1D3DD29900D1E4F8 /* RequestHandler.m in Sources */,
 				7F0A9CFB1D3F4703004A8192 /* JSONParser.m in Sources */,

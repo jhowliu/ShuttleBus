@@ -14,6 +14,7 @@
 @property (strong, nonatomic) NSString *depart;
 @property (strong, nonatomic) NSString *start;
 @property (strong, nonatomic) NSString *arrival;
+@property (nonatomic) BOOL isPublic;
 @property (nonatomic) BOOL isAdditional;
 
 // Initializing with a json file. 
